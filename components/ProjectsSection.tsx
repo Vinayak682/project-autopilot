@@ -105,7 +105,7 @@ export default function ProjectsSection() {
             <p className="text-sm text-slate-400">
               💡
               {' '}
-              Click "Run Demo" on any card to execute the live analysis in real-time.
+              Click &quot;Run Demo&quot; on any card to execute the live analysis in real-time.
               <span className="block text-xs text-slate-600 mt-2">
                 Demos connect to Anthropic Claude API for advanced reasoning and analysis.
               </span>

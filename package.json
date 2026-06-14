@@ -6,7 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "analyze": "ANALYZE=true next build",
+    "analyze:open": "ANALYZE=true next build && open .next/analyze/client.html",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"app/**/*.{ts,tsx}\" \"components/**/*.{ts,tsx}\" \"lib/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"app/**/*.{ts,tsx}\" \"components/**/*.{ts,tsx}\" \"lib/**/*.{ts,tsx}\"",
+    "backup:db": "bash scripts/backup-database.sh",
+    "update:deps": "bash scripts/update-dependencies.sh",
+    "audit": "npm audit --audit-level=moderate",
+    "audit:fix": "npm audit fix",
+    "precommit": "lint-staged && npm run type-check",
+    "postinstall": "echo 'Dependencies installed'"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -26,6 +40,15 @@
     "typescript": "^5.3.0",
     "@types/node": "^20.0.0",
     "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0"
+    "@types/react-dom": "^19.0.0",
+"@testing-library/react": "^16.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "@next/bundle-analyzer": "^15.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^15.0.0",
+    "lint-staged": "^14.0.0"
   }
 }
